@@ -26,3 +26,14 @@ Route::get('/partisipan', 'BlogController@partisipan');
 Route::get('/kami', 'BlogController@kami');
 Route::get('/registrasi', 'BlogController@regist');
 Route::post('/registrasi/save', 'BlogController@save');
+
+
+// parking-web
+Route::get('/parking', 'ParkingController@home');
+Route::get('/parking/masuk', 'ParkingController@showmasuk');
+Route::post('/parking/masuk/save', 'ParkingController@savemasuk');
+Route::post('/parking/keluar/cek', 'ParkingController@cekkeluar');
+
+Route::get('/print', function (){
+  return view('parking/pages/print-masuk');
+});
